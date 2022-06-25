@@ -3,6 +3,7 @@
   --text-color: #757575;
   --title-color: #212121;
   --background-color: #2f303a;
+  --icon-base-color: #afb1b8;
 }
 
 body {
@@ -103,6 +104,8 @@ body {
 }
 
 .contact-link {
+  display: inline-flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -112,6 +115,11 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+}
+
+.contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .contact-link:hover,
@@ -129,8 +137,17 @@ body {
 .section.hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  height: 600px;
 
-  background: var(--background-color);
+  background-color: var(--background-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   text-align: center;
 }
@@ -157,7 +174,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
-  background: #188ce8;
+  background-color: var(--accent-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -166,6 +183,11 @@ body {
   border: none;
 
   cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #188ce8;
 }
 
 .details {
@@ -181,6 +203,20 @@ body {
 
 .details-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.icon-bg {
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  justify-content: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.details-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .details-title {
@@ -265,7 +301,7 @@ body {
 
 .employee-position {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
   text-align: center;
 
   font-weight: 400;
@@ -274,13 +310,92 @@ body {
   color: var(--text-color);
 }
 
+.socials {
+  padding: 0;
+  margin: 0 32px;
+
+  list-style-type: none;
+}
+
+/* .socials-item {
+} */
+
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials-link {
+  display: inline-flex;
+
+  width: 44px;
+  height: 44px;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  color: var(--icon-base-color);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  color: #fff;
+  background-color: var(--accent-color);
+}
+
+.socials-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: currentColor;
+}
+
+.clients {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-icon-container {
+  justify-content: center;
+
+  width: 170px;
+  height: 92px;
+  color: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-icon-container:hover,
+.clients-icon-container:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+
+  fill: currentColor;
+}
+
 /* Footer */
 
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  /* padding-top: 60px;
+  padding-bottom: 60px; */
 
   background-color: var(--background-color);
+}
+
+.footer-address {
+  margin-right: 70px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .logo-footer {
@@ -322,6 +437,50 @@ body {
 .footer-contact:hover,
 .footer-contact:focus {
   color: var(--accent-color);
+}
+
+.footer-socials-container {
+  padding-top: 72px;
+  padding-bottom: 100px;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+}
+
+.footer-socials {
+  margin: 0 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.footer-socials-link {
+  display: inline-flex;
+
+  width: 44px;
+  height: 44px;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  background-color: var(--accent-color);
 }
 
 /* Portfolio */
